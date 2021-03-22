@@ -1,0 +1,69 @@
+$pastelGreen: #3EAF7C;
+$softRed: #b95858;
+$coolBlue: #5AB8CA;
+$borderStyle: 2px solid #2a3940;
+
+#Points {
+    border: $borderStyle;
+    border-radius: 7px;
+    padding: 10px;
+    text-align: center;
+
+    .divider {
+        border: $borderStyle;
+    }
+
+    p {
+        color: #ffffff;
+        font-weight: bolder;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .pointsContainer {
+        display: flex;
+        flex-direction: row;
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-right: $borderStyle; 
+            padding-right: 10px;
+            .button {
+                width: 100px;
+                height: 30px;
+                background:rgba(0,0,0,0);
+                margin: 5px 0;
+                border: 3px solid;
+    
+                &:focus {
+                    outline: none;
+                }
+                &:hover {
+                    transition: opacity 300ms ease-in-out;
+                    opacity: 0.5;
+                }
+                
+                &.add {
+                    border-color: $pastelGreen;
+                    color: $pastelGreen;
+                }
+                &.subtract {
+                    border-color: $softRed;
+                    color: $softRed;
+                }
+                &.reset {
+                    border-color: $coolBlue;
+                    color: $coolBlue;
+                }
+            }
+        }
+    
+        .outputBox {
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            width: 100px;
+        }
+    }
+}
